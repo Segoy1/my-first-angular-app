@@ -4,13 +4,25 @@
       <h3>I'm in the AppComponent</h3>
       <hr>
       <app-servers></app-servers>
-<!--      <div app-servers></div>-->
-<!--      <div class="app-servers"></div>-->
+      <!--      <div app-servers></div>-->
+      <!--      <div class="app-servers"></div>-->
       <hr>
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
       <hr>
       <app-user-input></app-user-input>
+      <hr>
+      <button
+        class="btn btn-primary"
+        (click)="onClick()"
+      >Display Details
+      </button>
+      <p *ngIf="pVisible">SecretPassword = tuna</p>
+      <p *ngFor="let member of count"
+         [ngStyle]="{backgroundColor: member > 4 ? 'blue' : 'transparent'}"
+         [ngClass]="{biggerfive: member > 4}">
+        {{member}}
+      </p>
     </div>
   </div>
 </div>
